@@ -7,13 +7,14 @@
 //
 
 import SwiftUI
-import KeyboardObserving
+import Combine
 
 struct RegisterView: View {
     @State private var username = ""
     @State private var password = ""
     @State private var success: Bool = false
     @State private var showingAlert: Bool = false
+    @State private var keyboardHeight: CGFloat = 0
     
     var body: some View {
         SwiftUIKeyboardHost {
@@ -50,8 +51,7 @@ struct RegisterView: View {
                         print(response)
                         if (response.getType() == RegisterResultType.SUCCESS) {
                             self.success.toggle()
-                        }
-                        if (response.getType() == RegisterResultType.USERNAME_EXISTS) {
+                        } else {
                             self.password = ""
                             self.username = ""
                             self.showingAlert.toggle()
@@ -66,18 +66,25 @@ struct RegisterView: View {
                          .cornerRadius(15.0)
                          .shadow(radius: 5.0, x: 3, y: 3)
                 }.padding(.top, 40).alert(isPresented: self.$showingAlert) {
-                    Alert(title: Text("Username already used"), message: Text("Please try again with another username"), dismissButton: .default(Text("Let's try")))
+                    Alert(title: Text("An error ocured"), message: Text("Please try again"), dismissButton: .default(Text("Let's try")))
                 }
                 Spacer()
-            }
-            .background(
-                LinearGradient(gradient: Gradient(colors: [.purple, .blue]),
+            }.background(LinearGradient(gradient: Gradient(colors: [.purple, .blue]),
                                startPoint: .top,
                                endPoint: .bottom).edgesIgnoringSafeArea(.all)
-            )
-        }.background(SwifUIDismissKeyboard())
+            ).padding(.bottom, self.keyboardHeight).onReceive(Publishers.keyboardHeight) {
+                self.keyboardHeight = $0
+            }
+        }.onTapGesture {
+            self.endEditing()
+        }
+    }
+    
+    private func endEditing() {
+        UIApplication.shared.endEditing()
     }
 }
+
 
 struct RegisterView_Previews: PreviewProvider {
     static var previews: some View {
