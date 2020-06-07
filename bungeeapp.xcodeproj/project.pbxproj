@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C2FA62E24884BC900A13BD3 /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2FA62D24884BC900A13BD3 /* RestClient.swift */; };
 		7C56C3B524883211009E1B67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C56C3B424883211009E1B67 /* AppDelegate.swift */; };
 		7C56C3B724883211009E1B67 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C56C3B624883211009E1B67 /* SceneDelegate.swift */; };
 		7C56C3B924883211009E1B67 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C56C3B824883211009E1B67 /* ContentView.swift */; };
@@ -18,9 +19,23 @@
 		7C56C3D924883C6D009E1B67 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C56C3D824883C6D009E1B67 /* LoginResponse.swift */; };
 		7C56C3DE24883D02009E1B67 /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C56C3DD24883D02009E1B67 /* RegisterResponse.swift */; };
 		7C56C3E024883D3B009E1B67 /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C56C3DF24883D3B009E1B67 /* RegisterRequest.swift */; };
+		7C799DE3248C22F800882BA9 /* SwiftUIDismissKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C799DE2248C22F800882BA9 /* SwiftUIDismissKeyboard.swift */; };
+		7C799DE5248C233300882BA9 /* UIResponder++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C799DE4248C233300882BA9 /* UIResponder++.swift */; };
+		7C799DE7248C235F00882BA9 /* UIView++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C799DE6248C235F00882BA9 /* UIView++.swift */; };
+		7C799DE9248C237E00882BA9 /* SwiftUIKeyboardHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C799DE8248C237E00882BA9 /* SwiftUIKeyboardHost.swift */; };
+		7C799DF2248C5A8400882BA9 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C799DF1248C5A8400882BA9 /* FeedView.swift */; };
+		7CD86439248BA0AE00316CFA /* AnyEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD86438248BA0AE00316CFA /* AnyEncodable.swift */; };
+		7CD8643B248BA0EA00316CFA /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD8643A248BA0EA00316CFA /* API.swift */; };
+		7CD8643E248BB51900316CFA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD8643D248BB51900316CFA /* LoginView.swift */; };
+		7CD86440248BDC6200316CFA /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD8643F248BDC6200316CFA /* RegisterView.swift */; };
+		7CD86443248BDCF200316CFA /* RegisterResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD86442248BDCF200316CFA /* RegisterResult.swift */; };
+		ECDDFB670E240834FC1560DB /* Pods_bungeeapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 129FE6695586697B38069166 /* Pods_bungeeapp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		129FE6695586697B38069166 /* Pods_bungeeapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bungeeapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		22FFADD7D58664974595B779 /* Pods-bungeeapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bungeeapp.debug.xcconfig"; path = "Target Support Files/Pods-bungeeapp/Pods-bungeeapp.debug.xcconfig"; sourceTree = "<group>"; };
+		7C2FA62D24884BC900A13BD3 /* RestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestClient.swift; sourceTree = "<group>"; };
 		7C56C3B124883211009E1B67 /* bungeeapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bungeeapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C56C3B424883211009E1B67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C56C3B624883211009E1B67 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +49,17 @@
 		7C56C3D824883C6D009E1B67 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		7C56C3DD24883D02009E1B67 /* RegisterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponse.swift; sourceTree = "<group>"; };
 		7C56C3DF24883D3B009E1B67 /* RegisterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
+		7C799DE2248C22F800882BA9 /* SwiftUIDismissKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIDismissKeyboard.swift; sourceTree = "<group>"; };
+		7C799DE4248C233300882BA9 /* UIResponder++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder++.swift"; sourceTree = "<group>"; };
+		7C799DE6248C235F00882BA9 /* UIView++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView++.swift"; sourceTree = "<group>"; };
+		7C799DE8248C237E00882BA9 /* SwiftUIKeyboardHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIKeyboardHost.swift; sourceTree = "<group>"; };
+		7C799DF1248C5A8400882BA9 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		7CD86438248BA0AE00316CFA /* AnyEncodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyEncodable.swift; sourceTree = "<group>"; };
+		7CD8643A248BA0EA00316CFA /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		7CD8643D248BB51900316CFA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		7CD8643F248BDC6200316CFA /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		7CD86442248BDCF200316CFA /* RegisterResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResult.swift; sourceTree = "<group>"; };
+		9A7D12D58C37E54767D3BFCB /* Pods-bungeeapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bungeeapp.release.xcconfig"; path = "Target Support Files/Pods-bungeeapp/Pods-bungeeapp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +67,48 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECDDFB670E240834FC1560DB /* Pods_bungeeapp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		650902DF72EA5EC6BB40E981 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				22FFADD7D58664974595B779 /* Pods-bungeeapp.debug.xcconfig */,
+				9A7D12D58C37E54767D3BFCB /* Pods-bungeeapp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7C1B00C1248C1945005BE5F9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7C1B00C2248C194E005BE5F9 /* KeyboardHelper */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		7C1B00C2248C194E005BE5F9 /* KeyboardHelper */ = {
+			isa = PBXGroup;
+			children = (
+				7C799DE2248C22F800882BA9 /* SwiftUIDismissKeyboard.swift */,
+				7C799DE4248C233300882BA9 /* UIResponder++.swift */,
+				7C799DE6248C235F00882BA9 /* UIView++.swift */,
+				7C799DE8248C237E00882BA9 /* SwiftUIKeyboardHost.swift */,
+			);
+			path = KeyboardHelper;
+			sourceTree = "<group>";
+		};
 		7C56C3A824883211009E1B67 = {
 			isa = PBXGroup;
 			children = (
 				7C56C3B324883211009E1B67 /* bungeeapp */,
 				7C56C3B224883211009E1B67 /* Products */,
+				650902DF72EA5EC6BB40E981 /* Pods */,
+				D830B169DC93BCDBA14DC72C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,12 +123,15 @@
 		7C56C3B324883211009E1B67 /* bungeeapp */ = {
 			isa = PBXGroup;
 			children = (
+				7C799DEA248C284600882BA9 /* Supporting Files */,
+				7C1B00C1248C1945005BE5F9 /* Helpers */,
+				7CD8643C248BB50800316CFA /* Views */,
 				7C56C3C8248832B0009E1B67 /* Services */,
 				7C56C3B424883211009E1B67 /* AppDelegate.swift */,
 				7C56C3B624883211009E1B67 /* SceneDelegate.swift */,
 				7C56C3B824883211009E1B67 /* ContentView.swift */,
-				7C56C3BA24883215009E1B67 /* Assets.xcassets */,
 				7C56C3BF24883215009E1B67 /* LaunchScreen.storyboard */,
+				7C56C3BA24883215009E1B67 /* Assets.xcassets */,
 				7C56C3C224883215009E1B67 /* Info.plist */,
 				7C56C3BC24883215009E1B67 /* Preview Content */,
 			);
@@ -91,6 +151,7 @@
 			children = (
 				7C56C3CA2488331A009E1B67 /* API */,
 				7C56C3C924883311009E1B67 /* Rest Client */,
+				7CD86438248BA0AE00316CFA /* AnyEncodable.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -99,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				7C56C3D124883BD2009E1B67 /* Models */,
+				7C2FA62D24884BC900A13BD3 /* RestClient.swift */,
 			);
 			path = "Rest Client";
 			sourceTree = "<group>";
@@ -107,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				7C56C3CB24883382009E1B67 /* Model */,
+				7CD8643A248BA0EA00316CFA /* API.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -122,6 +185,7 @@
 		7C56C3CC248833A2009E1B67 /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				7CD86441248BDCE400316CFA /* Register */,
 				7C56C3CD248833BB009E1B67 /* Login */,
 			);
 			path = Account;
@@ -202,6 +266,39 @@
 			path = Response;
 			sourceTree = "<group>";
 		};
+		7C799DEA248C284600882BA9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7CD8643C248BB50800316CFA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7CD8643D248BB51900316CFA /* LoginView.swift */,
+				7CD8643F248BDC6200316CFA /* RegisterView.swift */,
+				7C799DF1248C5A8400882BA9 /* FeedView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7CD86441248BDCE400316CFA /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				7CD86442248BDCF200316CFA /* RegisterResult.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		D830B169DC93BCDBA14DC72C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				129FE6695586697B38069166 /* Pods_bungeeapp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -209,9 +306,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7C56C3C524883215009E1B67 /* Build configuration list for PBXNativeTarget "bungeeapp" */;
 			buildPhases = (
+				1D9A62413A4567B32F896213 /* [CP] Check Pods Manifest.lock */,
 				7C56C3AD24883211009E1B67 /* Sources */,
 				7C56C3AE24883211009E1B67 /* Frameworks */,
 				7C56C3AF24883211009E1B67 /* Resources */,
+				7586C72EC50DD32FB5209B69 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -268,18 +367,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1D9A62413A4567B32F896213 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-bungeeapp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7586C72EC50DD32FB5209B69 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bungeeapp/Pods-bungeeapp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bungeeapp/Pods-bungeeapp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-bungeeapp/Pods-bungeeapp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7C56C3AD24883211009E1B67 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CD8643B248BA0EA00316CFA /* API.swift in Sources */,
+				7C799DE3248C22F800882BA9 /* SwiftUIDismissKeyboard.swift in Sources */,
 				7C56C3CF248833DC009E1B67 /* LoginResult.swift in Sources */,
+				7CD86440248BDC6200316CFA /* RegisterView.swift in Sources */,
 				7C56C3B524883211009E1B67 /* AppDelegate.swift in Sources */,
 				7C56C3D924883C6D009E1B67 /* LoginResponse.swift in Sources */,
 				7C56C3B724883211009E1B67 /* SceneDelegate.swift in Sources */,
+				7C2FA62E24884BC900A13BD3 /* RestClient.swift in Sources */,
+				7C799DF2248C5A8400882BA9 /* FeedView.swift in Sources */,
+				7C799DE5248C233300882BA9 /* UIResponder++.swift in Sources */,
+				7CD86443248BDCF200316CFA /* RegisterResult.swift in Sources */,
+				7C799DE7248C235F00882BA9 /* UIView++.swift in Sources */,
+				7CD8643E248BB51900316CFA /* LoginView.swift in Sources */,
 				7C56C3DE24883D02009E1B67 /* RegisterResponse.swift in Sources */,
+				7CD86439248BA0AE00316CFA /* AnyEncodable.swift in Sources */,
 				7C56C3D724883C08009E1B67 /* LoginRequest.swift in Sources */,
 				7C56C3E024883D3B009E1B67 /* RegisterRequest.swift in Sources */,
+				7C799DE9248C237E00882BA9 /* SwiftUIKeyboardHost.swift in Sources */,
 				7C56C3B924883211009E1B67 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,10 +566,12 @@
 		};
 		7C56C3C624883215009E1B67 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22FFADD7D58664974595B779 /* Pods-bungeeapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"bungeeapp/Preview Content\"";
+				DEVELOPMENT_TEAM = 4KBFY8F29R;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = bungeeapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -433,10 +587,12 @@
 		};
 		7C56C3C724883215009E1B67 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A7D12D58C37E54767D3BFCB /* Pods-bungeeapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"bungeeapp/Preview Content\"";
+				DEVELOPMENT_TEAM = 4KBFY8F29R;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = bungeeapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

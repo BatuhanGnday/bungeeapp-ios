@@ -9,6 +9,6 @@
 import Foundation
 
 struct LoginResponse: Decodable {
-    var token: String
+    var token: String? = nil
     var type: String
 }

@@ -8,11 +8,17 @@
 
 import Foundation
 
-struct LoginResult {
+class LoginResult {
+    internal init(type: LoginResultType) {
+        self.type = type
+    }
+    
     var type: LoginResultType;
 }
 
 enum LoginResultType {
     case SUCCESS
     case FAIL
+    case PASSWORD_FAIL
+    case USER_NOT_EXIST
 }
