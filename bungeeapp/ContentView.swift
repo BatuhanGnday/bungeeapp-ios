@@ -10,8 +10,14 @@ import SwiftUI
 
 struct ContentView: View {
 
+    @ViewBuilder
     var body: some View {
-        LoginView()
+        
+        if (SessionHelper.isUserLoggedIn()) {
+            FeedView()
+        } else {
+            LoginView()
+        }
     }
 
 }

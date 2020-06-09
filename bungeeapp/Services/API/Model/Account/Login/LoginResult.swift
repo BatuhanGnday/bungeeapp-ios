@@ -9,10 +9,12 @@
 import Foundation
 
 class LoginResult {
-    internal init(type: LoginResultType) {
+    internal init(token: String? = nil, type: LoginResultType) {
+        self.token = token
         self.type = type
     }
-    
+
+    var token: String?;
     var type: LoginResultType;
 }
 

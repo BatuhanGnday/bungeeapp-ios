@@ -48,7 +48,7 @@ class RestClient {
         request.httpBody = jsonData
         request.httpMethod = HTTPMethod.post.rawValue
         if !token!.isEmpty {
-            request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+            request.setValue("Bearer \(token!)", forHTTPHeaderField: "Authorization")
         }
         request.setValue("application/json; charset=UTF-8", forHTTPHeaderField: "Content-Type")
         

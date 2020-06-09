@@ -26,7 +26,7 @@ class API {
             }
             if(data.value?.type == "SUCCESS") {
                 token = data.value?.token
-                result(LoginResult(type: LoginResultType.SUCCESS))
+                result(LoginResult(token: (data.value?.token)!, type: LoginResultType.SUCCESS))
             }
         }
     }

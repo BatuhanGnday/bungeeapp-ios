@@ -9,8 +9,14 @@
 import SwiftUI
 
 struct FeedView: View {
+    @State var loggedOut: Bool = false
     var body: some View {
-        Text("Logged In")
+        Button(action: {
+            SessionHelper.logout()
+            self.loggedOut = true
+        }) {
+            Text("Logout")
+        }.navigate(to: LoginView(), when: $loggedOut)
     }
 }
 

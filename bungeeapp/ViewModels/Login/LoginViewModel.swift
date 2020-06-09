@@ -37,6 +37,7 @@ extension LoginViewModel {
             (response: LoginResult) in
             
             if(response.type == LoginResultType.SUCCESS) {
+                SessionHelper.setCurrentLoginToken(response.token!)
                 result(true)
             } 
         }
