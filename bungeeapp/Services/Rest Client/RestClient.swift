@@ -38,6 +38,7 @@ class RestClient {
     
     private static func postMethod<T: Decodable>(endpoint: String,
                                                  data: AnyEncodable?,
+                                                 token: String? = String(),
                                                  result: @escaping (_ result: AFDataResponse<T>) -> Void) -> DataRequest {
         let jsonData = try! encoder.encode(data)
         let urlString = "\(BASE_URL)\(endpoint)"
@@ -46,6 +47,9 @@ class RestClient {
         var request = URLRequest(url: url)
         request.httpBody = jsonData
         request.httpMethod = HTTPMethod.post.rawValue
+        if !token!.isEmpty {
+            request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        }
         request.setValue("application/json; charset=UTF-8", forHTTPHeaderField: "Content-Type")
         
         return AF.request(request).responseDecodable(decoder: decoder, completionHandler: { (response: AFDataResponse<T>) in

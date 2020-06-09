@@ -25,6 +25,7 @@
 		7C799DE9248C237E00882BA9 /* SwiftUIKeyboardHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C799DE8248C237E00882BA9 /* SwiftUIKeyboardHost.swift */; };
 		7C799DF2248C5A8400882BA9 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C799DF1248C5A8400882BA9 /* FeedView.swift */; };
 		7C799DF5248D0EBA00882BA9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C799DF4248D0EBA00882BA9 /* Extensions.swift */; };
+		7C799DF9248D39B500882BA9 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C799DF8248D39B400882BA9 /* LoginViewModel.swift */; };
 		7CD86439248BA0AE00316CFA /* AnyEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD86438248BA0AE00316CFA /* AnyEncodable.swift */; };
 		7CD8643B248BA0EA00316CFA /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD8643A248BA0EA00316CFA /* API.swift */; };
 		7CD8643E248BB51900316CFA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD8643D248BB51900316CFA /* LoginView.swift */; };
@@ -56,6 +57,7 @@
 		7C799DE8248C237E00882BA9 /* SwiftUIKeyboardHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIKeyboardHost.swift; sourceTree = "<group>"; };
 		7C799DF1248C5A8400882BA9 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		7C799DF4248D0EBA00882BA9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		7C799DF8248D39B400882BA9 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		7CD86438248BA0AE00316CFA /* AnyEncodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyEncodable.swift; sourceTree = "<group>"; };
 		7CD8643A248BA0EA00316CFA /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		7CD8643D248BB51900316CFA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -125,10 +127,11 @@
 		7C56C3B324883211009E1B67 /* bungeeapp */ = {
 			isa = PBXGroup;
 			children = (
+				7C799DF6248D399800882BA9 /* ViewModels */,
 				7C799DF3248D0E9400882BA9 /* Extensions */,
 				7C799DEA248C284600882BA9 /* Supporting Files */,
 				7C1B00C1248C1945005BE5F9 /* Helpers */,
-				7CD8643C248BB50800316CFA /* Views */,
+				7CD8643C248BB50800316CFA /* Scenes */,
 				7C56C3C8248832B0009E1B67 /* Services */,
 				7C56C3B424883211009E1B67 /* AppDelegate.swift */,
 				7C56C3B624883211009E1B67 /* SceneDelegate.swift */,
@@ -284,14 +287,30 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		7CD8643C248BB50800316CFA /* Views */ = {
+		7C799DF6248D399800882BA9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				7C799DF7248D39A600882BA9 /* Login */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		7C799DF7248D39A600882BA9 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				7C799DF8248D39B400882BA9 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		7CD8643C248BB50800316CFA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
 				7CD8643D248BB51900316CFA /* LoginView.swift */,
 				7CD8643F248BDC6200316CFA /* RegisterView.swift */,
 				7C799DF1248C5A8400882BA9 /* FeedView.swift */,
 			);
-			path = Views;
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		7CD86441248BDCE400316CFA /* Register */ = {
@@ -445,6 +464,7 @@
 				7C56C3E024883D3B009E1B67 /* RegisterRequest.swift in Sources */,
 				7C799DE9248C237E00882BA9 /* SwiftUIKeyboardHost.swift in Sources */,
 				7C56C3B924883211009E1B67 /* ContentView.swift in Sources */,
+				7C799DF9248D39B500882BA9 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
