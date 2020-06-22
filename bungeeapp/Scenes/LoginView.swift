@@ -11,8 +11,6 @@ import Combine
 import KeyboardObserving
 
 struct LoginView: View {
-    @State private var username = ""
-    @State private var password = ""
     @State private var showingRegister: Bool = false
     @State private var loggedIn: Bool = false
     @State private var loginFail: Bool = false

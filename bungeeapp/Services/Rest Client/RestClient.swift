@@ -20,7 +20,7 @@ class RestClient {
     private static let encoder = JSONEncoder()
     
     static func login(request: LoginRequest,
-                      result: @escaping (_ result: AFDataResponse<LoginResponse>) -> Void) -> DataRequest {
+                      result: @escaping (_ result: AFDataResponse<LoginResponse>) -> Void) {
         postMethod(endpoint: "/accounts/login",
                    data: AnyEncodable(LoginRequest(username: request.username, password: request.password))) {
             (data: AFDataResponse<LoginResponse>) in
@@ -29,9 +29,17 @@ class RestClient {
     }
     
     static func register(request: RegisterRequest,
-                         result: @escaping (_ result: AFDataResponse<RegisterResponse>) -> Void) -> DataRequest {
+                         result: @escaping (_ result: AFDataResponse<RegisterResponse>) -> Void) {
         postMethod(endpoint: "/accounts/sign-up", data: AnyEncodable(RegisterRequest(username: request.username, password: request.password))) {
             (data: AFDataResponse<RegisterResponse>) in
+            result(data)
+        }
+    }
+    
+    static func getFeed(token: String,
+                        result: @escaping (_ result: AFDataResponse<FeedResponse>) -> Void) {
+        getMethod(endpoint: "/profiles/feed", token: token) {
+            (data: AFDataResponse<FeedResponse>) in
             result(data)
         }
     }
@@ -39,7 +47,7 @@ class RestClient {
     private static func postMethod<T: Decodable>(endpoint: String,
                                                  data: AnyEncodable?,
                                                  token: String? = String(),
-                                                 result: @escaping (_ result: AFDataResponse<T>) -> Void) -> DataRequest {
+                                                 result: @escaping (_ result: AFDataResponse<T>) -> Void) {
         let jsonData = try! encoder.encode(data)
         let urlString = "\(BASE_URL)\(endpoint)"
         let url = URL(string: urlString)!
@@ -52,7 +60,7 @@ class RestClient {
         }
         request.setValue("application/json; charset=UTF-8", forHTTPHeaderField: "Content-Type")
         
-        return AF.request(request).responseDecodable(decoder: decoder, completionHandler: { (response: AFDataResponse<T>) in
+        AF.request(request).responseDecodable(decoder: decoder, completionHandler: { (response: AFDataResponse<T>) in
             print(response)
             switch response.result {
             case .success:
@@ -65,23 +73,23 @@ class RestClient {
     
     private static func getMethod<T: Decodable>(endpoint: String,
                                                 token: String? = nil,
-                                                result: @escaping (_ result: AFDataResponse<T>) -> Void) -> DataRequest {
+                                                result: @escaping (_ result: AFDataResponse<T>) -> Void) {
         let urlString = "\(BASE_URL)\(endpoint)"
         let url = URL(string: urlString)!
         
         var request = URLRequest(url: url)
         request.httpMethod = HTTPMethod.get.rawValue
         request.setValue("application/json; charset=UTF-8", forHTTPHeaderField: "Content-Type")
-        request.setValue("Bearer \(String(describing: token))", forHTTPHeaderField: "Authorization")
+        request.setValue("Bearer \(token!)", forHTTPHeaderField: "Authorization")
         
-        return AF.request(request).responseDecodable(decoder: decoder, completionHandler: { (response: AFDataResponse<T>) in
+        AF.request(request).responseDecodable(decoder: decoder, completionHandler: { (response: AFDataResponse<T>) in
             switch response.result {
             case .success:
                 result(response)
             case .failure:
+                print(token!)
                 print("Failed to execute request.")
             }
         })
-        
     }
 }

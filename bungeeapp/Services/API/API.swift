@@ -52,4 +52,11 @@ class API {
             }
         }
     }
+    
+    public static func getFeed(result: @escaping (_ result: FeedResult) -> ()) {
+        RestClient.getFeed(token: UserDefaults.standard.value(forKey: "userToken") as! String) { (data: AFDataResponse<FeedResponse>) in
+            print(data)
+            result(FeedResult(posts: (data.value?.posts)!))
+        }
+    }
 }
